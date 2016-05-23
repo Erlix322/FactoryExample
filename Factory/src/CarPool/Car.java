@@ -1,5 +1,5 @@
 package CarPool;
 
 public interface Car {
-	public void createCar(); 
+	public void showCar(); 
 }

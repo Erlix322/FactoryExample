@@ -4,7 +4,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import CarPool.Car;
-import CarPool.FactoryCars;
+import CarPool.CarFactory;
+import CarPool.DresdnerManufaktur;
+
 import application.AnimationGenerator;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -25,7 +27,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class CFactory implements Initializable{
+public class Controller implements Initializable{
 	ObservableList<String> list = FXCollections.observableArrayList();
 	
 	MFactory model = new MFactory();
@@ -39,7 +41,7 @@ public class CFactory implements Initializable{
 	@FXML
 	Button btn;
 	AnimationGenerator anim = new AnimationGenerator();
-	FactoryCars fac = new FactoryCars();
+	CarFactory fac = new DresdnerManufaktur();
 	
 	private static final int startX = 0;
     private static final int endX = 100;
@@ -67,7 +69,7 @@ public class CFactory implements Initializable{
 					anim.applyXYTranslateAnimationOn(newCloud, 500, startX, endX,startY,endY);
 			    	anim.scaleTransition(newCloud, 500, 1, 3);
 			    	i++;
-			    	Thread.sleep(500);
+			    	Thread.sleep(300);
 				}
 				return null;
 			}
@@ -81,7 +83,7 @@ public class CFactory implements Initializable{
 				System.out.println("***************Arbeit ist vollbracht!***************"
 						+"\nAuto: "+model.getAuto()+" hergestellt");				
 				
-			fac.getCar(model.getAuto()).createCar();
+			fac.getCar(model.getAuto()).showCar();
 			model.setRunning(false);
 		
 			}

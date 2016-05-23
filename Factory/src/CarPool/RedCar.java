@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 public class RedCar implements Car{
 
 	@Override
-	public void createCar() {
+	public void showCar() {
 		AnchorPane apane = new AnchorPane();
 		ImageView img = new ImageView("Car_red.png");
 		apane.setMaxSize(256, 256);

@@ -1,7 +1,8 @@
 package CarPool;
 
-public class FactoryCars {
-
+public class DresdnerManufaktur implements CarFactory{
+	
+	@Override
 	public Car getCar(String color){
 		
 		//Instanzieren der Klassen und Objektbildung
@@ -12,4 +13,5 @@ public class FactoryCars {
 		return null;		
 		
 	}
+
 }
