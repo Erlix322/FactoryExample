@@ -1,5 +1,5 @@
 package CarPool;
 
 public interface CarFactory {
-	 Car getCar(String color);
+	 Car getCar(String color); 
 }
